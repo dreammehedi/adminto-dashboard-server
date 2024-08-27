@@ -1,0 +1,12 @@
+{
+  "name": "adminto-dashboard-server",
+  "version": "1.0.0",
+  "description": "Adminto-Dashboard-Server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Md. Mehedi Hassan",
+  "license": "ISC"
+}
