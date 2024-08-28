@@ -2,22 +2,23 @@ import dotenv from "dotenv";
 import app from "./src/app.js";
 import { connectDb } from "./src/db/db.js";
 
+// Load environment variables from .env file
 dotenv.config({
   path: "./.env",
 });
 
+// Connect to the database and start the server
 connectDb()
   .then(() => {
-    app.on("error", (error) => {
-      console.log("Server Initialization Error!", error);
-      throw error;
-    });
-    app.get("/", (req, res) => res.send("Adminto Dashboard Server."));
+    console.log("Database connection successful!");
 
-    app.listen(process.env.PORT || 5000, () => {
-      console.log(`Server Running On PORT:${process.env.PORT || 5000}`);
+    // Start the server
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+      console.log(`Server Running On PORT: ${PORT}`);
     });
   })
   .catch((error) => {
-    console.log("Database Server Connection Error:", error);
+    console.error("Database Server Connection Error:", error);
+    process.exit(1); // Exit the process with an error code
   });
