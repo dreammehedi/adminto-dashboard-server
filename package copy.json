@@ -1,21 +1,21 @@
 {
-  "name": "adminto-dashboard-server",
+  "name": "footyroom-server",
   "version": "1.0.0",
-  "description": "Adminto-Dashboard-Server.",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Md. Mehedi Hassan",
+  "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongodb": "^6.8.0",
-    "mongoose": "^8.5.4"
+    "mongoose": "^8.5.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.4",
