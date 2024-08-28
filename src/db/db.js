@@ -6,11 +6,11 @@ export const connectDb = async () => {
       `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.sizskqa.mongodb.net/${process.env.DB_NAME}`
     );
     console.log(
-      "Data Base connected successfully",
+      "Database Connected Successfully.",
       connectionInstance.connection.host
     );
   } catch (error) {
-    console.log("Database connection error", error);
+    console.log("Database Connection Error!", error);
     process.exit(1);
   }
 };

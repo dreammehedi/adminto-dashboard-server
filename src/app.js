@@ -1,15 +1,19 @@
-import express from 'express';
-import cors from 'cors';
+import cors from "cors";
+import express from "express";
+import galleryRouter from "./router/gallery.router.js";
 
 const app = express();
 
 app.use(
   cors({
-    origin: '*',
+    origin: "*",
     credentials: true,
   })
 );
 
 app.use(express.json());
 
-export { app };
+// all router middleware
+app.use("/api", galleryRouter);
+
+export default app;
