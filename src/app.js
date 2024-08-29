@@ -3,6 +3,7 @@ import express from "express";
 import rateLimit from "express-rate-limit";
 import createHttpError from "http-errors";
 import morgan from "morgan";
+import calendarRouter from "./router/calendar.router.js";
 import galleryRouter from "./router/gallery.router.js";
 
 // Rate limiting configuration
@@ -32,6 +33,7 @@ app.get("/", (req, res) => {
 
 // All router middleware
 app.use("/api", galleryRouter);
+app.use("/api", calendarRouter);
 
 // Client-side error handling (404 Not Found)
 app.use((req, res, next) => {
