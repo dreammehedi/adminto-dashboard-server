@@ -1,8 +1,12 @@
 import express from "express";
-import { getCalendarEventsData } from "../controllers/calendar.controller.js";
+import {
+  getCalendarEventsData,
+  postCalendarEventsData,
+} from "../controllers/calendar.controller.js";
 
 const calendarRouter = express.Router();
 
 calendarRouter.get("/calendar", getCalendarEventsData);
+calendarRouter.post("/calendar", postCalendarEventsData);
 
 export default calendarRouter;
